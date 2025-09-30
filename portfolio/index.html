@@ -1,54 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manas's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header__links">
-                    <a href="#" class="header__link">Header link</a>
-                    <a href="#" class="header__link">Header link</a>
-                    <a href="#" class="header__link">Header link</a>
-                    <a href="#" class="header__link">Header link</a>
-                    <a href="#" class="header__link">Header link</a>
-                </div>
-                <div class="header__social">
-                    <img src="img/linkedin.png" alt="linkedin_svg">
-                    <img src="img/behance.png" alt="behance_svg">
-                    <img src="img/twitter.png" alt="twitter_svg">
-                </div>
-            </div>
+  <header class="top-nav">
+      <div class="container">
+      <div class="top-nav__wrapper">
+        <div class="top-nav__links">
+            <nav>
+              <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <!-- <li><a href="#">Testimonials</a></li> -->
+                <li><a href="#">Recent work</a></li>
+                <li><a href="#">Get in Touch</a></li>
+              </ul>
+            </nav>
         </div>
-    </header>
-    <main class="name">
-        <div class="container">
-            <div class="name__wrapper">
-                <div class="name__upside">
-                    <div class="name__leftside">
-                        <h1 class="name__title">Your name here</h1>
-                        <p class="name__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione, mollitia eum aut necessitatibus eaque asperiores reprehenderit, expedita molestiae commodi eligendi ex deserunt, ducimus quis modi error nam! Dolore, distinctio.</p>
-                        <button class="name__btn">Let's get started <span><img src="img/arrow_right.svg" alt="arrow_right"></span></button>
-                    </div>
-                    <div class="name__rightside">
-                        <img src="img/man_img.png" alt="Man img">
-                    </div>        
-                </div>
-                <div class="name__downside">
-                    <p class="name__downside-p">Worked with</p>
-                    <div class="name__downside-logos">
-                        <img src="img/clickup.png" alt="clickup">
-                        <img src="img/dropbox.png" alt="dropbox">
-                        <img src="img/paychex.png" alt="paychex">
-                        <img src="img/elastic.png" alt="elastic">
-                        <img src="img/stripe.png" alt="stripe">
-                    </div>
-                </div>
-            </div>
+        <div class="top-nav__logos">
+          <a href="#"><img src="img/linkedin.png" alt=""></a>
+          <a href="#"><img src="img/behance.png" alt=""></a>
+          <a href="#"><img src="img/twitter.png" alt=""></a>
         </div>
-    </main>
+      </div>
+    </div>
+  </header>
+
+    <section class="hero">
+  <div class="container">
+    <div class="hero-container">
+
+      <div class="hero-content">
+        <div class="hero-info">
+          <h1>Manas Abdrasulov</h1>
+          <p>Cheers bro. My name is Manas and I'm a Java Backend developer.</p>
+          <a href="#" class="btn-primary">Let’s get started ➜</a>  
+        </div>
+        <div class="hero-image">
+          <img src="img/man_img.png" alt="Your Photo" />
+        </div>
+      </div> 
+
+      <div class="hero-container__bottom">
+        <div class="clients">
+          <p>Worked with</p>
+          <div class="client-logos">
+            <div>Java Core</div>
+            <div>Spring Boot</div>
+            <div>Spring MVC</div>
+          </div>
+        </div>
+      </div>  
+
+    </div>
+  </div>
+</section>
+ 
+ <!-- <section class="case-studies">
+    <div class="container">
+      <h2>Case Studies</h2>
+      <p>Solve user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      <div class="study">
+        <div class="text">
+          <span class="tag orange">Fintech</span>
+          <h3>Work name here</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#" class="btn-outline">View case study ➜</a>
+        </div>
+        <div class="image">
+          <img src="img/workname1.png" alt="Project 1" />
+        </div>
+      </div>
+
+      <div class="study reverse">
+        <div class="text">
+          <span class="tag blue">Edtech</span>
+          <h3>Work name here</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#" class="btn-outline">View case study ➜</a>
+        </div>
+        <div class="image">
+          <img src="img/workname2.png" alt="Project 2" />
+        </div>
+      </div>
+      <div class="study">
+        <div class="text">
+          <span class="tag green">Pharse</span>
+          <h3>Work name here</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#" class="btn-outline green">View case study ➜</a>
+        </div>
+        <div class="image">
+          <img src="img/workname3.png" alt="Project 3" />
+        </div>
+      </div>
+
+    </div> 
+   </section> -->
+
+
+  <section class="testimonials">
+  <div class="container">
+    <h2>Testimonials</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+    <p>Manas sigma</p>
+        <div class="client-info">
+          <img src="img/uzar-hape.png" alt="Client 1">
+          <span>Uzar</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+    <p>Manas sigma</p>
+        <div class="client-info">
+          <img src="img/uzar-hape.png" alt="Client 1">
+          <span>Uzar</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+    <p>Manas sigma</p>
+        <div class="client-info">
+          <img src="img/uzar-hape.png" alt="Client 1">
+          <span>Uzar</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+    <p>Manas sigma</p>
+        <div class="client-info">
+          <img src="img/uzar-hape.png" alt="Client 1">
+          <span>Uzar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="recent-work">
+  <div class="container">
+    <h2>Recent Work</h2>
+    <p>Solving user & business problems since last 15+ years.<br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <div class="work-grid">
+      <div class="work-card">
+        <img src="img/umai.png" alt="Recent Work 1">
+        <h3>UmAI</h3>
+        <p>UmAI - your literary world</p>
+        <a href="https://github.com/JGRex-Joy/umAI" class="btn-green">Know more ➜</a>
+      </div>
+      <div class="work-card">
+        <img src="img/recentwork2.png" alt="Recent Work 2">
+        <h3>Work name here</h3>
+        <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+        <a href="#" class="btn-green">Know more ➜</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    
+    <form id="contact-form" class="contact-form">
+      <input type="email" id="email" placeholder="Please enter your email" required>
+      <input type="tel" id="phone" placeholder="Enter mobile" required>
+      <textarea id="message" placeholder="Enter your message" rows="5" required></textarea>
+  <button type="submit">Submit ➜</button>
+</form>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <p>Made with ❤️</p>
+</footer>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+
+    let telegram_bot_id = "8205870236:AAGBlRwzuGfzKQluYVeuGJW-k1iHQhbBsMM";  // вставь сюда токен
+    let chat_id = "7034649143"; // вставь сюда свой chat_id
+
+    let text = `📩 Новое сообщение с сайта:
+Email: ${email}
+Телефон: ${phone}
+Сообщение: ${message}`;
+
+    fetch(`https://api.telegram.org/bot${telegram_bot_id}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: text,
+        parse_mode: "HTML"
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert("✅ Сообщение отправлено!");
+      document.getElementById("contact-form").reset();
+    })
+    .catch(err => {
+      alert("❌ Ошибка при отправке: " + err);
+    });
+  });
+</script> 
 </body>
 </html>

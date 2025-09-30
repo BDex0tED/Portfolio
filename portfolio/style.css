@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+a, li{
+  cursor: pointer;
+}
+
+a, li:hover{
+  color: red;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
@@ -12,85 +20,102 @@ body {
   color: #333;
 }
 
+
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  /* max-width: 1491.56px; */
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
-/* Top Navigation */
 .top-nav {
-  background: #111;
-  color: #fff;
-  padding: 20px 0;
+  background-color: #080808;
+  color: #9c9c9c;
+  font-family: "IBM Plex Mono", monospace;
 }
 
-.nav-container {
+.top-nav__wrapper{
+  background-color: #1B1B1B;
+  padding: 26px 80px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-radius: 0px 0px 12px 12px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  justify-content: space-around;
+  gap: 40px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #ccc;
   font-weight: 500;
+  line-height: 1.2px;
+  cursor: pointer;
+
 }
 
-.social-icons a {
-  color: #ccc;
-  margin-left: 15px;
+.top-nav__logos a {
+  cursor: pointer;
   text-decoration: none;
 }
 
+
 /* Hero Section */
 .hero {
-  background: #0d0d0d;
+  background: #080808;
   color: #fff;
   padding: 80px 0;
 }
 
-.hero-container {
+.hero-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
-.hero-content {
-  flex: 1;
-  max-width: 600px;
+.client-logos{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero-info{
+  max-width: 70%;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 58px;
+  color: white;
   margin-bottom: 20px;
 }
 
 .hero-content p {
   margin-bottom: 30px;
   font-size: 18px;
-  color: #bbb;
+  color: #9c9c9c;
+  max-width: 70%  ;
 }
 
 .btn-primary {
   display: inline-block;
-  background: #00e676;
-  color: #000;
-  padding: 12px 24px;
-  border-radius: 6px;
+  background: #3F8E00 ;
+  color: white;
+  padding: 22px 144px;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
 }
 
 .clients {
   margin-top: 40px;
+  
 }
 
 .clients p {
@@ -98,18 +123,30 @@ body {
   font-weight: bold;
 }
 
-.client-logos img {
-  max-height: 30px;
-  margin-right: 20px;
-  opacity: 0.8;
+.client-logos {
+  padding-top: 15px;
+}
+
+.client-logos div {
+  border: 1px solid white ;
+  padding: 15px 45px;
+}
+
+.client-logos div:hover{
+  background-color: white;
+  color: black;
+
+  transition: 0.3s ease-out;
 }
 
 /* Hero Image */
 .hero-image img {
-  width: 250px;
-  height: 250px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   object-fit: cover;
+
+  margin-left: 100px;
 }
 
 /* Case Studies */
@@ -231,35 +268,44 @@ body {
 }
 
 .testimonials h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .testimonials p {
   max-width: 600px;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
+  color: #9c9c9c;
 }
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
 .testimonial-card {
   background-color: #1c1c1c;
-  padding: 20px;
+  padding: 25px 20px 20px;
   border-radius: 8px;
   position: relative;
+  text-align: left;
 }
 
 .testimonial-card::before {
   content: "❝";
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
   position: absolute;
-  top: 10px;
-  left: 20px;
+  top: -10px;
+  left: 15px;
+}
+
+.testimonial-card p {
+  margin-top: 20px; 
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
 }
 
 .client-info {
@@ -269,11 +315,32 @@ body {
 }
 
 .client-info img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 12px;
 }
+
+.client-info span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 колонки */
+  gap: 30px;
+  max-width: 1000px; /* ✅ ограничиваем ширину */
+  margin: 0 auto;    /* ✅ выравниваем по центру */
+}
+
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr; /* ✅ на мобилке — одна колонка */
+  }
+}
+
+
 
 /* Recent Work Section */
 .recent-work {
